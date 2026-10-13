@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto médico</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="encabezado">
+        <a class="logo" href="index.html">✚ Tu Salud</a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="medico.html">Mi perfil</a>
+            <a href="cita.html">Citas</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>Contacto</h1>
+        <p>Esta sección muestra cómo podría funcionar un formulario de contacto para realizar preguntas generales sobre los servicios.</p>
+
+        <form id="formContacto" class="formulario">
+            <label for="nombreContacto">Nombre de ejemplo:</label>
+            <input type="text" id="nombreContacto" required>
+
+            <label for="correoContacto">Correo de ejemplo:</label>
+            <input type="email" id="correoContacto" required>
+
+            <label for="mensajeContacto">Pregunta general:</label>
+            <textarea id="mensajeContacto" placeholder="Escribe una pregunta ficticia sobre los servicios." required></textarea>
+
+            <button type="submit" class="boton">Probar formulario</button>
+        </form>
+
+        <p id="resultadoContacto" role="status" aria-live="polite"></p>
+
+        <p class="aviso">
+            Este formulario es una demostración. No se envían ni almacenan mensajes.
+            No incluyas información clínica o personal.
+        </p>
+
+        <a href="index.html" class="boton">Volver al inicio</a>
+    </main>
+
+    <footer>© 2026 Tu Salud, Nuestra Prioridad</footer>
+</body>
+</html>

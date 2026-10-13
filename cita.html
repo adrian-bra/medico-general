@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar cita médica</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="encabezado">
+        <a class="logo" href="index.html">✚ Tu Salud</a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="medico.html">Mi perfil</a>
+            <a href="cita.html">Citas</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>Solicita información para una cita</h1>
+        <p>Completa el formulario de demostración con datos ficticios.</p>
+
+        <form id="formCita" class="formulario">
+            <label for="nombre">Nombre de ejemplo:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="correo">Correo de ejemplo:</label>
+            <input type="email" id="correo" required>
+
+            <label for="tipo">Motivo general de la consulta:</label>
+            <select id="tipo" required>
+                <option value="">Selecciona una opción</option>
+                <option>Consulta general</option>
+                <option>Revisión preventiva</option>
+                <option>Seguimiento médico</option>
+                <option>Información sobre servicios</option>
+            </select>
+
+            <label for="fecha">Fecha preferida (opcional):</label>
+            <input type="date" id="fecha">
+
+            <label>
+                <input type="checkbox" id="acepto" required>
+                Comprendo que es una demostración escolar y que no se enviarán mis datos.
+            </label>
+
+            <button type="submit" class="boton">Probar solicitud</button>
+        </form>
+
+        <p id="resultado" role="status" aria-live="polite"></p>
+
+        <p class="aviso">
+            El formulario no envía datos, no guarda información y no reserva citas reales.
+            No escribas información médica ni datos personales verdaderos.
+        </p>
+
+        <a href="index.html" class="boton">Volver al inicio</a>
+    </main>
+
+    <footer>© 2026 Tu Salud, Nuestra Prioridad</footer>
+</body>
+</html>

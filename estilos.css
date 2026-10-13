@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul: #1976b9;
+    --azul-oscuro: #124568;
+    --azul-claro: #eaf5fc;
+    --verde: #3c9c87;
+    --fondo: #f5f9fc;
+    --texto: #34495e;
+    --blanco: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+.encabezado {
+    background: var(--blanco);
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 12px #0000000c;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--azul-oscuro);
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--azul);
+}
+
+.hero {
+    padding: 65px 8%;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero h1 {
+    color: var(--azul-oscuro);
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hero img {
+    width: 45%;
+    min-width: 260px;
+    max-height: 390px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+.etiqueta {
+    color: var(--verde);
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+.boton {
+    display: inline-block;
+    background: var(--azul);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    margin-right: 7px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton:hover {
+    background: var(--azul-oscuro);
+}
+
+.boton-secundario {
+    background: var(--verde);
+}
+
+.boton-blanco {
+    background: white;
+    color: var(--azul-oscuro);
+}
+
+.seccion {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+.seccion h2,
+.contenido h1 {
+    color: var(--azul-oscuro);
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px #0000000a;
+}
+
+.tarjeta h3 {
+    color: var(--azul-oscuro);
+    margin: 10px 0;
+}
+
+.icono {
+    color: var(--verde);
+    font-size: 35px;
+}
+
+.franja {
+    background: var(--azul-oscuro);
+    color: white;
+    text-align: center;
+    padding: 48px 20px;
+}
+
+.franja h2 {
+    margin-bottom: 10px;
+}
+
+.contenido {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px #00000008;
+}
+
+.contenido h2 {
+    color: var(--azul-oscuro);
+    margin: 22px 0 10px;
+}
+
+.contenido ul {
+    padding-left: 25px;
+}
+
+.contenido li {
+    margin-bottom: 8px;
+}
+
+.formulario {
+    display: grid;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.formulario label {
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd9e3;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.formulario textarea {
+    min-height: 110px;
+}
+
+.formulario input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.aviso {
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--azul-claro);
+    border-radius: 10px;
+}
+
+#resultado,
+#resultadoContacto {
+    margin-top: 18px;
+    color: #17664d;
+    font-weight: bold;
+}
+
+footer {
+    background: #e5eef5;
+    text-align: center;
+    padding: 24px;
+    font-size: 14px;
+}
+
+@media (max-width: 760px) {
+    .encabezado {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 35px 6%;
+    }
+
+    .hero img {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido {
+        margin: 20px 12px;
+        padding: 22px;
+    }
+}
